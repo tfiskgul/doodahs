@@ -1,0 +1,13 @@
+apply plugin: 'eclipse'
+
+group = "se.tfiskgul"
+
+eclipse {
+	project {
+		name = rootProject.group + "." + name
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.5'
+}
