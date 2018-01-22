@@ -4,9 +4,11 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
 browser {
-	background-color: #222222 !important;
+	color: white;
+	background-color: #222222;
 }
 
 tabbrowser tabpanels {
+	color: white  !important;
 	background-color: #222222 !important;
 }
