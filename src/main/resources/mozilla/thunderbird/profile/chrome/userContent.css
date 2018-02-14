@@ -3,3 +3,11 @@ body, td, p, div, blockquote, span, table {
 	color: white !important;
 	background-color: #303030 !important;
 }
+
+a:link {
+	color: lightblue !important;
+}
+
+a:visited {
+	color: lightpink !important;
+}
