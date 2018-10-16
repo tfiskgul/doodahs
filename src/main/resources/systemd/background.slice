@@ -1,0 +1,74 @@
+[Unit]
+Description=Background slice with much lower system (particularly IO) impact
+Before=slices.target
+
+[Slice]
+# CPU
+# cgroup v1. The allowed range is 2 to 262144. Defaults to 1024.
+#CPUShares=10
+# cgroup v2. The allowed range is 1 to 10000. Defaults to 100.
+CPUWeight=10
+
+# IO, cgroup v1.
+# BlockIOAccounting=yes
+# BlockIOWeight=10
+# FIXME: Make this dynamic with a generator
+# BlockIOReadBandwidth=/dev/sda 2M
+# BlockIOReadBandwidth=/dev/sdb 2M
+# BlockIOReadBandwidth=/dev/sdc 2M
+# BlockIOReadBandwidth=/dev/sdd 2M
+# BlockIOReadBandwidth=/dev/sde 2M
+# BlockIOReadBandwidth=/dev/sdf 2M
+# BlockIOReadBandwidth=/dev/sdg 2M
+# BlockIOReadBandwidth=/dev/sdh 2M
+# BlockIOReadBandwidth=/dev/sdj 2M
+# BlockIOReadBandwidth=/dev/sdl 2M
+# BlockIOReadBandwidth=/dev/sdm 2M
+# BlockIOReadBandwidth=/dev/sdn 2M
+# BlockIOReadBandwidth=/dev/sdo 2M
+# write
+# BlockIOWriteBandwidth=/dev/sda 2M
+# BlockIOWriteBandwidth=/dev/sdb 2M
+# BlockIOWriteBandwidth=/dev/sdc 2M
+# BlockIOWriteBandwidth=/dev/sdd 2M
+# BlockIOWriteBandwidth=/dev/sde 2M
+# BlockIOWriteBandwidth=/dev/sdf 2M
+# BlockIOWriteBandwidth=/dev/sdg 2M
+# BlockIOWriteBandwidth=/dev/sdh 2M
+# BlockIOWriteBandwidth=/dev/sdj 2M
+# BlockIOWriteBandwidth=/dev/sdl 2M
+# BlockIOWriteBandwidth=/dev/sdm 2M
+# BlockIOWriteBandwidth=/dev/sdn 2M
+# BlockIOWriteBandwidth=/dev/sdo 2M
+
+# IO, group v2
+IOAccounting=yes
+IOWeight=10
+# FIXME: Make this dynamic with a generator
+IOReadBandwidthMax=/dev/sda 2M
+IOReadBandwidthMax=/dev/sdb 2M
+IOReadBandwidthMax=/dev/sdc 2M
+IOReadBandwidthMax=/dev/sdd 2M
+IOReadBandwidthMax=/dev/sde 2M
+IOReadBandwidthMax=/dev/sdf 2M
+IOReadBandwidthMax=/dev/sdg 2M
+IOReadBandwidthMax=/dev/sdh 2M
+IOReadBandwidthMax=/dev/sdj 2M
+IOReadBandwidthMax=/dev/sdl 2M
+IOReadBandwidthMax=/dev/sdm 2M
+IOReadBandwidthMax=/dev/sdn 2M
+IOReadBandwidthMax=/dev/sdo 2M
+# write
+IOWriteBandwidthMax=/dev/sda 2M
+IOWriteBandwidthMax=/dev/sdb 2M
+IOWriteBandwidthMax=/dev/sdc 2M
+IOWriteBandwidthMax=/dev/sdd 2M
+IOWriteBandwidthMax=/dev/sde 2M
+IOWriteBandwidthMax=/dev/sdf 2M
+IOWriteBandwidthMax=/dev/sdg 2M
+IOWriteBandwidthMax=/dev/sdh 2M
+IOWriteBandwidthMax=/dev/sdj 2M
+IOWriteBandwidthMax=/dev/sdl 2M
+IOWriteBandwidthMax=/dev/sdm 2M
+IOWriteBandwidthMax=/dev/sdn 2M
+IOWriteBandwidthMax=/dev/sdo 2M

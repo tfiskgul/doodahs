@@ -1,0 +1,13 @@
+[Unit]
+Description=Save iptables configuration
+Requisite=iptables.service
+After=iptables.service
+
+[Timer]
+# Time to wait after booting before we run first time
+OnBootSec=15min
+# Time between running each consecutive time
+OnUnitActiveSec=15min
+
+[Install]
+WantedBy=timers.target
