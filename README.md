@@ -1,2 +1,2 @@
 # doodahs
-Small collection of scripts, configs and settings files.
+Small collection of scripts, snippets, configs and settings files.
