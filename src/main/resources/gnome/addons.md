@@ -41,9 +41,8 @@
 * Suspend button
   * https://extensions.gnome.org/extension/826/suspend-button/
 
-
-* Taskbar
-  * https://extensions.gnome.org/extension/584/taskbar/
+* Dash to Panel
+  * https://extensions.gnome.org/extension/1160/dash-to-panel/
 
 
 * Topicons
