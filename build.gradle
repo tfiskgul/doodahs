@@ -1,9 +1,0 @@
-apply plugin: 'eclipse'
-
-group = "se.tfiskgul"
-
-eclipse {
-	project {
-		name = rootProject.group + "." + name
-	}
-}
