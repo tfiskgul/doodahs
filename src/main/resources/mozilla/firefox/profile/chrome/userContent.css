@@ -1,8 +1,0 @@
-
-@-moz-document url(about:newtab) {
-	body { background-color: #222222 !important; }
-}
-
-@-moz-document url(about:blank) {
-	* { background-color: #222222 !important; }
-}
