@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This script will run on libvirt QEMU machine actions, see https://libvirt.org/hooks.html
+# $1 is the domain (VM) name
+# $2 and $3 are the phase and action arguments
+# Example: /etc/libvirt/hooks/qemu guest_name prepare begin -
+QEMU_D_PATH="/etc/libvirt/hooks/qemu.d"
+SCRIPT_PATH="${QEMU_D_PATH}/$1/$2.$3"
+
+# Debug
+date >> "${QEMU_D_PATH}/log.txt"
+echo "${SCRIPT_PATH}" "$@" >> "${QEMU_D_PATH}/log.txt"
+
+if [[ -x "${SCRIPT_PATH}" ]]; then
+	"${SCRIPT_PATH}" "$@" >> "${QEMU_D_PATH}/log.txt" 2>&1
+fi
